@@ -20,8 +20,7 @@ const storeProxy = new Proxy(store, storeHandler);
 function addTodo(newTodo) {
   if (newTodo.titles.length) {
     store.TODO = [newTodo, ...store.TODO];
-
-    render();
+   
   }
 }
 export function removeItem(id) {

@@ -17,6 +17,8 @@ form.addEventListener("submit", (e) => {
     complete: false,
   };
   addTodo(newTodo);
+  input.value = "";
+  render();
 });
 const parentContainer = document.querySelector(".todos");
 parentContainer.addEventListener("click", (e) => {
@@ -28,5 +30,4 @@ parentContainer.addEventListener("click", (e) => {
 parentContainer.addEventListener("change", (e) => {
   const id = e.target.closest(".todo").dataset.id;
   toggleTick(id, e.target.checked);
-  
 });
